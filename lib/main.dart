@@ -6,6 +6,7 @@
 
 import 'package:firstapp/counter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Text(
                 value.count.toString(),
@@ -68,8 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
             final counter = context.read<Counter>();
             counter.increment();
           },
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
