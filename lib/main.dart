@@ -1,4 +1,3 @@
-import 'package:firstapp/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 19, 191, 128)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Counter'),
+      home: const MyHomePage(title: 'Start counting!'),
     );
   }
 }
@@ -69,5 +68,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),// This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
+  }
+}
+class Counter extends ChangeNotifier {
+  int _count = 0;
+  int get count => _count;
+
+  void increment(){
+    _count++;
+    notifyListeners();
   }
 }
