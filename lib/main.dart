@@ -52,24 +52,31 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
+          centerTitle: true,
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text(
                 value.count.toString(),
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
+              FloatingActionButton(
+                onPressed: (){
+                  final counter = context.read<Counter>();
+                  counter.increment();
+                },
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text('Add'),
+                  ],
+                ),
+              ),
             ],
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            final counter = context.read<Counter>();
-            counter.increment();
-          },
-        ), // This trailing comma makes auto-formatting nicer for build methods.
+        ),// This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
   }
