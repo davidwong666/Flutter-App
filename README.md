@@ -7,7 +7,8 @@ The lower tab is the **Add** button.
 The upper tab shows the **number of times the button is clicked**.  
 Click the button to start counting!    
 You can run the program by executing the following command to the terminal:  
-`flutter run lib\main.dart`
+`flutter run lib\main.dart`  
+And then choose the desired environment or device.
 
 <h2>Working principles:</h2>
 
