@@ -4,7 +4,7 @@
 This is a counter app written in **dart**.  
 It contains **2** tabs.  
 The lower tab is the **Add** button.  
-The upper tab counts the number of times the button being clicked.  
+The upper tab shows the **number of times the button is clicked**.  
 Click the button to start counting!    
 You can run the program by executing the following command to the terminal:  
 `flutter run lib\main.dart`
